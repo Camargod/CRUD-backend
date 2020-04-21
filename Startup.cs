@@ -27,10 +27,10 @@ namespace backend
                 {
                     builder.AllowAnyHeader();
                     builder.AllowAnyMethod();
-                    builder.WithOrigins("http://localhost:4200/");
+                    builder.WithOrigins("https://crud-frontangular.herokuapp.com");
                 });
             });
-            services.AddDbContext<DataContext>(opt => opt.UseSqlServer("Server=tcp:gabriel-test.database.windows.net,1433;Database=Users;Uid=gabriel;Pwd=Testesql@123;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;"));
+            services.AddDbContext<DataContext>(opt => opt.UseSqlServer("Server=34.95.166.193;Database=Users;Uid=sqlserver;Pwd=Biel210801@;Encrypt=True;TrustServerCertificate=True;Connection Timeout=30;"));
             services.AddScoped<DataContext, DataContext>();
             services.AddControllers();
             
